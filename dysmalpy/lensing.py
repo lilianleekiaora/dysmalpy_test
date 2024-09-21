@@ -27,7 +27,7 @@ from distutils.sysconfig import get_config_var
 
 #mylibfile = os.path.abspath(os.path.dirname(__file__))+os.sep+"lensingTransformer"+get_config_var('EXT_SUFFIX')
 mylibfile = os.path.abspath(os.path.dirname('__file__'))+'/dysmalpy/lensing_transformer'+os.sep+"lensingTransformer"+get_config_var('EXT_SUFFIX')
-print(mylibfil)
+print(mylibfile)
 # ++++++++++++
 # if not os.path.isfile(mylibfile):
     # mylibfile = os.path.abspath(os.path.dirname(__file__))+os.sep+"lensingTransformer*.so"

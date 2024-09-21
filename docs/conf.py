@@ -32,8 +32,7 @@ import dysmalpy
 
 
 
-autodoc_mock_imports = ['ctypes']
-exclude_patterns = ['dysmalpy/lensing.py']
+# autodoc_mock_imports = ['ctypes']
 
 # -- Project information -----------------------------------------------------
 
@@ -101,7 +100,7 @@ if sys.version_info[0] == 2:
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build','dysmalpy/lensing.py']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

@@ -32,7 +32,7 @@ import dysmalpy
 
 
 
-autodoc_mock_imports = ["lensingTransformer"]
+autodoc_mock_imports = ['ctypes']
 exclude_patterns = ['../dysmalpy/lensing.py']
 
 # -- Project information -----------------------------------------------------

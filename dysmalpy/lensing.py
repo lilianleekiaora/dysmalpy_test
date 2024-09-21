@@ -25,12 +25,16 @@ import numpy as np
 import multiprocessing, threading
 from distutils.sysconfig import get_config_var
 
-mylibfile = os.path.abspath(os.path.dirname(__file__))+os.sep+"lensingTransformer"+get_config_var('EXT_SUFFIX')
+#mylibfile = os.path.abspath(os.path.dirname(__file__))+os.sep+"lensingTransformer"+get_config_var('EXT_SUFFIX')
+mylibfile = os.path.abspath(os.path.dirname('__file__'))+'/dysmalpy/lensing_transformer'+os.sep+"lensingTransformer"+get_config_var('EXT_SUFFIX')
 
 # ++++++++++++
+# if not os.path.isfile(mylibfile):
+    # mylibfile = os.path.abspath(os.path.dirname(__file__))+os.sep+"lensingTransformer*.so"
+    # mylibfile = glob.glob(mylibfile)[0]
 if not os.path.isfile(mylibfile):
-    mylibfile = os.path.abspath(os.path.dirname(__file__))+os.sep+"lensingTransformer*.so"
-    mylibfile = glob.glob(mylibfile)[0]
+	mylibfile = os.path.abspath(os.path.dirname('__file__'))+'/dysmalpy/lensing_transformer'+os.sep+"libLensingTransformer*.so"
+	mylibfile = glob.glob(mylibfile)[0]
 # ++++++++++++
 mylib = cdll.LoadLibrary(mylibfile)
 cached_lensing_transformer_dict = {'0': None}

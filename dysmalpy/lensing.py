@@ -32,9 +32,9 @@ print(mylibfile)
 # if not os.path.isfile(mylibfile):
     # mylibfile = os.path.abspath(os.path.dirname(__file__))+os.sep+"lensingTransformer*.so"
     # mylibfile = glob.glob(mylibfile)[0]
-# if not os.path.isfile(mylibfile):
-# 	mylibfile = os.path.abspath(os.path.dirname('__file__'))+'/dysmalpy/lensing_transformer'+os.sep+"libLensingTransformer*.so"
-# 	mylibfile = glob.glob(mylibfile)[0]
+if not os.path.isfile(mylibfile):
+	mylibfile = os.path.abspath(os.path.dirname('__file__'))+'/dysmalpy/lensing_transformer'+os.sep+"libLensingTransformer*.so"
+	mylibfile = glob.glob(mylibfile)[0]
 # ++++++++++++
 mylib = cdll.LoadLibrary(mylibfile)
 cached_lensing_transformer_dict = {'0': None}
